@@ -27,8 +27,29 @@ import java.util.regex.Pattern;
  */
 public interface MemberAccessValueStack {
 
+    /**
+     * Sets a set of {@link Pattern}s that represent the properties to be excluded.
+     * Any attempt to get or set a property that matches any of the patterns will
+     * result in an {@link UnsupportedOperationException}.
+     *
+     * @param excludeProperties the set of {@link Pattern}s that represent the properties to be excluded
+     * @throws NullPointerException if the given set is <code>null</code>
+     * @throws UnsupportedOperationException if an attempt to get or set a property that matches any
+     * of the patterns is made
+     * @see Pattern
+     * @see Set
+     */
     void useExcludeProperties(Set<Pattern> excludeProperties);
 
+    /**
+     * Sets a set of {@link Pattern}s that represent the properties to be accepted.
+     * Only properties that match any of the patterns will be accessible.
+     *
+     * @param acceptedProperties the set of {@link Pattern}s that represent the properties to be accepted
+     * @throws NullPointerException if the given set is <code>null</code>
+     * @see Pattern
+     * @see Set
+     */
     void useAcceptProperties(Set<Pattern> acceptedProperties);
 
 }

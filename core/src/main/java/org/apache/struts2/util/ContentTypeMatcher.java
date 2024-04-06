@@ -27,8 +27,24 @@ import java.util.Map;
  */
 public interface ContentTypeMatcher<E extends Object> {
 
+    /**
+     * Compiles a given pattern into an internal format for faster matching.
+     *
+     * @param data the pattern to compile
+     * @return the compiled pattern
+     * @throws NullPointerException if the given pattern is {@code null}
+     */
     E compilePattern(String data);
 
+    /**
+     * Checks if a given data matches the given expression.
+     *
+     * @param map the metadata of the data to match, typically containing "content-type"
+     * @param data the data to match
+     * @param expr the compiled pattern to match
+     * @return {@code true} if the data matches, {@code false} otherwise
+     * @throws NullPointerException if the metadata, data or pattern is {@code null}
+     */
     boolean match(Map<String,String> map, String data, E expr);
 
 }

@@ -21,5 +21,10 @@ package org.apache.struts2.rest.handler.xstream;
 import java.util.Set;
 
 public interface XStreamAllowedClassNames {
+    /**
+     * Returns the set of allowed class names when using the XStream library.
+     * 
+     * @return a set of strings representing the fully qualified class names
+     */
     Set<String> allowedClassNames();
 }

@@ -20,5 +20,11 @@ package org.apache.struts2.views.java;
 
 public interface TagHandlerFactory {
 
+    /**
+     * Creates and returns a new {@link TagHandler} object.
+     *
+     * @param next the next handler in the chain of responsibility.
+     * @return a new {@link TagHandler} object.
+     */
     public TagHandler create(TagHandler next);
 }

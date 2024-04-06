@@ -28,11 +28,35 @@ import com.opensymphony.xwork2.util.Bar;
  */
 public interface DataAware {
 
+    /**
+     * Sets the bar object.
+     *
+     * @param b the bar object
+     * @since 1.0
+     */
     void setBarObj(Bar b);
 
+    /**
+     * Gets the bar object.
+     *
+     * @return the bar object
+     * @since 1.0
+     */
     Bar getBarObj();
 
+    /**
+     * Sets the data.
+     *
+     * @param data the data
+     * @since 1.0
+     */
     void setData(String data);
 
+    /**
+     * Gets the data.
+     *
+     * @return the data
+     * @since 1.0
+     */
     String getData();
 }

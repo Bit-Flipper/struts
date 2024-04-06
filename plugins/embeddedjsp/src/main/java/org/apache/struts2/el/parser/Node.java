@@ -53,6 +53,11 @@ public interface Node {
      */
     public void jjtSetParent(Node n);
 
+    /**
+     * Returns the node's parent.
+     *
+     * @return the node
+     */
     public Node jjtGetParent();
 
     /**
@@ -79,19 +84,87 @@ public interface Node {
      */
     public int jjtGetNumChildren();
 
+    /**
+     * Gets the image of the node.
+     *
+     * @return image
+     */
     public String getImage();
 
+    /**
+     * Gets the value of the node.
+     *
+     * @param ctx evaluation context
+     *
+     * @return value
+     *
+     * @throws ELException exception
+     */
     public Object getValue(EvaluationContext ctx) throws ELException;
 
+    /**
+     * Sets the value of the node.
+     *
+     * @param ctx evaluation context
+     * @param value value
+     *
+     * @throws ELException exception
+     */
     public void setValue(EvaluationContext ctx, Object value) throws ELException;
 
+    /**
+     * Gets the type of the node.
+     *
+     * @param ctx evaluation context
+     *
+     * @return type
+     *
+     * @throws ELException exception
+     */
     public Class getType(EvaluationContext ctx) throws ELException;
 
+    /**
+     * Checks if the node is read-only.
+     *
+     * @param ctx evaluation context
+     *
+     * @return true if read-only
+     *
+     * @throws ELException exception
+     */
     public boolean isReadOnly(EvaluationContext ctx) throws ELException;
 
+    /**
+     * Accepts a node visitor.
+     *
+     * @param visitor visitor
+     *
+     * @throws Exception exception
+     */
     public void accept(NodeVisitor visitor) throws Exception;
 
+    /**
+     * Gets the method info of the node.
+     *
+     * @param ctx evaluation context
+     * @param paramTypes parameter types
+     *
+     * @return method info
+     *
+     * @throws ELException exception
+     */
     public MethodInfo getMethodInfo(EvaluationContext ctx, Class[] paramTypes) throws ELException;
 
+    /**
+     * Invokes the node.
+     *
+     * @param ctx evaluation context
+     * @param paramTypes parameter types
+     * @param paramValues parameter values
+     *
+     * @return result
+     *
+     * @throws ELException exception
+     */
     public Object invoke(EvaluationContext ctx, Class[] paramTypes, Object[] paramValues) throws ELException;
 }

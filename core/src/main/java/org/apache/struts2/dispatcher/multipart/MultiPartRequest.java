@@ -32,6 +32,13 @@ import java.util.List;
  */
 public interface MultiPartRequest {
 
+    /**
+     * Parses the given HTTP request and saves the uploaded files to the specified directory.
+     *
+     * @param request The HTTP request to parse.
+     * @param saveDir The directory where uploaded files should be saved.
+     * @throws IOException If there is an error while parsing the request.
+     */
     void parse(HttpServletRequest request, String saveDir) throws IOException;
     
     /**

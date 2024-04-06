@@ -28,6 +28,13 @@ package org.apache.struts2.dispatcher.mapper;
  */
 public interface ParameterAction {
 
+    /**
+     * Executes the parameter action. This method is called when a configured prefix key is found in a parameter name.
+     * The implementation can manipulate the {@link ActionMapping} based on the matching key and parameter name.
+     *
+     * @param key           the prefix key
+     * @param mapping       the action mapping
+     */
     void execute(String key, ActionMapping mapping);
 
 }

@@ -21,5 +21,12 @@ package org.apache.struts2.rest.handler.xstream;
 import java.util.Set;
 
 public interface XStreamAllowedClasses {
+    /**
+     * <p>
+     * Returns the set of classes that are allowed to be parsed by XStream.
+     * </p>
+     *
+     * @return the set of allowed classes. It can't be {@code null}.
+     */
     Set<Class<?>> allowedClasses();
 }

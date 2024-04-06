@@ -35,14 +35,34 @@ import com.opensymphony.xwork2.validator.annotations.RequiredStringValidator;
 @Conversion()
 public interface AnnotationDataAware {
 
+    /**
+     * Sets the bar object.
+     *
+     * @param b the bar object
+     */
     void setBarObj(Bar b);
 
+    /**
+     * Gets the bar object.
+     *
+     * @return the bar object
+     */
     @TypeConversion(converterClass = FooBarConverter.class)
     Bar getBarObj();
 
+    /**
+     * Sets the data.
+     *
+     * @param data the data
+     */
     @RequiredFieldValidator(message = "You must enter a value for data.")
     @RequiredStringValidator(message = "You must enter a value for data.")
     void setData(String data);
 
+    /**
+     * Gets the data.
+     *
+     * @return the data
+     */
     String getData();
 }

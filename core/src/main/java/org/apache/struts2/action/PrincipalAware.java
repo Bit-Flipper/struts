@@ -29,6 +29,11 @@ import org.apache.struts2.interceptor.PrincipalProxy;
  */
 public interface PrincipalAware {
 
+    /**
+     * Set the PrincipalProxy object for this action.
+     *
+     * @param principalProxy the PrincipalProxy object to be set.
+     */
     void withPrincipalProxy(PrincipalProxy principalProxy);
 
 }

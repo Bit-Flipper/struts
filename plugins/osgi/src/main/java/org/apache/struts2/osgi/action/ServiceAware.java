@@ -29,6 +29,12 @@ import java.util.List;
  */
 public interface ServiceAware<T> {
 
+    /**
+     * <p>
+     * Injects a list of services with type T into the implementing class
+     * </p>
+     * @param services The list of services of type T
+     */
     void withServices(List<T> services);
 
 }

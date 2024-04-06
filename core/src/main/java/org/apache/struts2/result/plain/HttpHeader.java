@@ -20,8 +20,18 @@ package org.apache.struts2.result.plain;
 
 public interface HttpHeader<T> {
 
+    /**
+     * Returns the name of the HTTP header field.
+     *
+     * @return the name of the HTTP header field
+     */
     String getName();
 
+    /**
+     * Returns the value of the HTTP header field.
+     *
+     * @return the value of the HTTP header field
+     */
     T getValue();
 
 }

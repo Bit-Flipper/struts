@@ -25,6 +25,12 @@ package com.opensymphony.xwork2.interceptor;
  */
 public interface ValidationWorkflowAware {
 
+    /**
+     * Returns the name of the result to which the control will be forwarded if validation errors occur.
+     *
+     * @return the name of the result to which the control will be forwarded if validation errors occur
+     * @see #setInputResultName(String)
+     */
     String getInputResultName();
 
 }
