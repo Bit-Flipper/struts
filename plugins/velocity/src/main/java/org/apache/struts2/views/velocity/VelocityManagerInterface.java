@@ -31,9 +31,27 @@ import javax.servlet.http.HttpServletResponse;
  */
 public interface VelocityManagerInterface {
 
+    /**
+     * Creates a Velocity context with the given parameters.
+     *
+     * @param stack the ValueStack instance containing the data
+     * @param req the HttpServletRequest instance
+     * @param res the HttpServletResponse instance
+     * @return a Context instance
+     */
     Context createContext(ValueStack stack, HttpServletRequest req, HttpServletResponse res);
 
+    /**
+     * Returns the VelocityEngine instance.
+     *
+     * @return the VelocityEngine instance
+     */
     VelocityEngine getVelocityEngine();
 
+    /**
+     * Initializes the Velocity manager.
+     *
+     * @param context the ServletContext instance
+     */
     void init(ServletContext context);
 }

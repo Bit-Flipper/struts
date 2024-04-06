@@ -23,5 +23,15 @@ import com.thoughtworks.xstream.security.TypePermission;
 import java.util.Collection;
 
 public interface XStreamPermissionProvider {
+    /**
+     * <p>
+     * Get the {@link TypePermission}s for an {@link com.thoughtworks.xstream.XStream} instance.
+     * </p>
+     * 
+     * @return A collection of {@link TypePermission}s defining the permissions for the XStream instance.
+     * 
+     * @see com.thoughtworks.xstream.XStream
+     * @see TypePermission
+     */
     Collection<TypePermission> getTypePermissions();
 }

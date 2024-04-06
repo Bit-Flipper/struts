@@ -74,5 +74,11 @@ public interface ResourceIsolationPolicy {
     String SITE_SAME_SITE = "same-site";
     String SITE_NONE = "none";
 
+    /**
+     * Checks if the given request is allowed based on the fetch metadata.
+     *
+     * @param request the request to check
+     * @return {@code true} if the request is allowed, {@code false} otherwise
+     */
     boolean isRequestAllowed(HttpServletRequest request);
 }

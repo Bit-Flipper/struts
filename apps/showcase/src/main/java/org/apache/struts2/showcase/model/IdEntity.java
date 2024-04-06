@@ -28,6 +28,11 @@ import java.io.Serializable;
 
 public interface IdEntity extends Serializable {
 
+	/**
+	 * Gets the unique identifier of the entity.
+	 *
+	 * @return the unique identifier
+	 */
 	Serializable getId();
 
 	void setId(Serializable id);

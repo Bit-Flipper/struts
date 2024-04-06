@@ -23,5 +23,12 @@ package org.apache.struts2.el.parser;
  * @version $Change: 181177 $$DateTime: 2001/06/26 08:45:09 $$Author: markt $
  */
 public interface NodeVisitor {
+    /**
+     * <p>
+     * Visit a node in the Struts 2 EL parse tree.</p>
+     * 
+     * @param node The node to visit.
+     * @throws Exception if an error occurs during the visit.
+     */
     public void visit(Node node) throws Exception;
 }

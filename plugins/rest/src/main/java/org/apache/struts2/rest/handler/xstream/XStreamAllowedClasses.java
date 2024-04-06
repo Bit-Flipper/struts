@@ -21,5 +21,13 @@ package org.apache.struts2.rest.handler.xstream;
 import java.util.Set;
 
 public interface XStreamAllowedClasses {
+    /**
+     * <p>Returns a set of {@link Class} instances representing the set of allowed classes that can be serialized or
+     * deserialized using XStream.</p>
+     *
+     * <p>The returned set should be immutable and not contain any duplicate entries.</p>
+     *
+     * @return a set of {@link Class} instances representing the set of allowed classes
+     */
     Set<Class<?>> allowedClasses();
 }

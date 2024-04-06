@@ -23,8 +23,30 @@ package com.opensymphony.xwork2;
  */
 public interface FileManagerFactory {
 
+    /**
+     * <p>
+     * Sets the comma-separated list of configuration files/directories to be reloaded.
+     * </p>
+     *
+     * <p>
+     * Reloading is done by passing a comma-separated list of resources which will be periodically scanned for changes.
+     * If any of the resources has changed (e.g. a new file was added, or an existing file was modified), all
+     * configuration will be reloaded from the start.
+     * </p>
+     *
+     * @param reloadingConfigs a comma-separated list of configuration files/directories to be reloaded
+     * @see #getFileManager()
+     */
     void setReloadingConfigs(String reloadingConfigs);
 
+    /**
+     * <p>
+     * Returns the {@code FileManager} instance managed by this {@code FileManagerFactory}.
+     * </p>
+     *
+     * @return the {@code FileManager} instance managed by this {@code FileManagerFactory}
+     * @see #setReloadingConfigs(String)
+     */
     FileManager getFileManager();
 
 }

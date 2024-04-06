@@ -21,7 +21,32 @@ package org.apache.struts2.views.java;
 import org.apache.struts2.components.template.TemplateRenderingContext;
 
 public interface Theme {
+    /**
+     * <p>
+     * Gets the name of this theme.
+     * </p>
+     *
+     * <p>
+     * The name of a theme must be unique within the scope of its usage.
+     * </p>
+     *
+     * @return the name of this theme.
+     */
     public String getName();
 
+    /**
+     * <p>
+     * Renders a template for this theme.
+     * </p>
+     *
+     * <p>
+     * The implementation of this method should render the specified template using the provided {@link TemplateRenderingContext}.
+     * </p>
+     *
+     * @param name
+     *            the name of the template to render.
+     * @param context
+     *            the rendering context for the template.
+     */
     public void renderTag(String name, TemplateRenderingContext context);
 }

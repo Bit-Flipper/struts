@@ -32,13 +32,55 @@ public interface ClassLoaderInterface {
     //key used to add the current ClassLoaderInterface to ActionContext
     public final String CLASS_LOADER_INTERFACE = "__current_class_loader_interface";
 
+    /**
+     * <p>
+     * Loads a class with the specified name.
+     * </p>
+     *
+     * @param name The fully qualified name of the class.
+     * @return The resulting Class object.
+     * @throws ClassNotFoundException if the class could not be found.
+     */
     Class<?> loadClass(String name) throws ClassNotFoundException;
 
+    /**
+     * <p>
+     * Finds a resource with a given name.
+     * </p>
+     *
+     * @param name The name of the resource.
+     * @return A URL object for the resource, or null if the resource could not be found.
+     */
     URL getResource(String name);
 
+    /**
+     * <p>
+     * Returns an enumeration of URLs representing all of the resources with a given name.
+     * </p>
+     *
+     * @param name The name of the resource.
+     * @return An enumeration of URL objects for the resources, or an empty enumeration if no resources could be found.
+     * @throws IOException if an input or output exception occurred.
+     */
     public Enumeration<URL> getResources(String name) throws IOException;
 
+    /**
+     * <p>
+     * Finds a resource with a given name.
+     * </p>
+     *
+     * @param name The name of the resource.
+     * @return An input stream for the resource, or null if the resource could not be found.
+     * @throws IOException if an input or output exception occurred.
+     */
     public InputStream getResourceAsStream(String name) throws IOException;
 
+    /**
+     * <p>
+     * Gets the parent ClassLoaderInterface.
+     * </p>
+     *
+     * @return The parent ClassLoaderInterface.
+     */
     ClassLoaderInterface getParent();
 }

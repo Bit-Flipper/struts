@@ -34,7 +34,18 @@ public interface ActionConfigBuilder {
      */
     void buildActionConfigs();
 
+    /**
+     * Checks whether the action configurations need to be reloaded or not.
+     *
+     * @return true if the action configurations need to be reloaded, false otherwise.
+     * @see java.io.Serializable
+     */
     boolean needsReload();
 
+    /**
+     * Performs any cleanup that might be necessary.
+     *
+     * @see java.io.Serializable
+     */
     void destroy();
 }

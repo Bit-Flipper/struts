@@ -27,8 +27,22 @@ import java.util.Map;
  */
 public interface ContentTypeMatcher<E extends Object> {
 
+    /**
+     * Compiles a pattern into a form that can be used for matching.
+     *
+     * @param data the pattern to compile
+     * @return the compiled expression
+     */
     E compilePattern(String data);
 
+    /**
+     * Matches a given data using the provided compiled expression.
+     *
+     * @param map request parameters
+     * @param data the data to match
+     * @param expr the compiled expression
+     * @return true if the data matches the compiled expression
+     */
     boolean match(Map<String,String> map, String data, E expr);
 
 }

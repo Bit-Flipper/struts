@@ -23,6 +23,13 @@ package com.opensymphony.xwork2.result;
  */
 public interface ParamNameAwareResult {
 
+    /**
+     * <p>Checks if the specified parameter name and value are acceptable for this result.</p>
+     *
+     * @param name parameter name
+     * @param value parameter value
+     * @return true if name/value are acceptable, false otherwise
+     */
     boolean acceptableParameterName(String name, String value);
 
 }

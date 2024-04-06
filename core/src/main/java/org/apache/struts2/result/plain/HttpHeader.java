@@ -20,8 +20,32 @@ package org.apache.struts2.result.plain;
 
 public interface HttpHeader<T> {
 
+    /**
+     * <p>
+     * Gets the name of the HTTP header.
+     * </p>
+     *
+     * <p>
+     * The name of the HTTP header is a case-insensitive token, consisting of printable
+     * ASCII characters excluding control characters, SP (space), and DQUOTE (double quote).
+     * </p>
+     *
+     * @return the name of the HTTP header
+     */
     String getName();
 
+    /**
+     * <p>
+     * Gets the value of the HTTP header.
+     * </p>
+     *
+     * <p>
+     * The value of the HTTP header is a sequence of characters, excluding NUL (U+0000) and CR (U+000D),
+     * which MAY be empty; Line breaks within the value are represented as CRLF.
+     * </p>
+     *
+     * @return the value of the HTTP header
+     */
     T getValue();
 
 }

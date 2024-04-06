@@ -35,12 +35,31 @@ import java.util.Set;
  */
 public interface Configuration extends Serializable {
 
+    /**
+     * Rebuilds the runtime configuration.
+     */
     void rebuildRuntimeConfiguration();
 
+    /**
+     * Returns the PackageConfig with the given name.
+     *
+     * @param name the name of the PackageConfig
+     * @return the PackageConfig, or null if not found
+     */
     PackageConfig getPackageConfig(String name);
 
+    /**
+     * Returns the names of all PackageConfigs.
+     *
+     * @return the names of all PackageConfigs
+     */
     Set<String> getPackageConfigNames();
 
+    /**
+     * Returns a Map of all PackageConfigs, with their names as keys.
+     *
+     * @return a Map of all PackageConfigs
+     */
     Map<String, PackageConfig> getPackageConfigs();
 
     /**
@@ -51,6 +70,12 @@ public interface Configuration extends Serializable {
      */
     RuntimeConfiguration getRuntimeConfiguration();
 
+    /**
+     * Adds a PackageConfig to the configuration.
+     *
+     * @param name        the name of the PackageConfig
+     * @param packageConfig the PackageConfig
+     */
     void addPackageConfig(String name, PackageConfig packageConfig);
 
     /**
@@ -79,6 +104,11 @@ public interface Configuration extends Serializable {
      */
     Container getContainer();
 
+    /**
+     * Returns the names of all loaded files.
+     *
+     * @return the names of all loaded files
+     */
     Set<String> getLoadedFileNames();
 
     /**

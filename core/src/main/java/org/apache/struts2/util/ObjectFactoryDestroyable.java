@@ -26,5 +26,17 @@ package org.apache.struts2.util;
  * @see org.apache.struts2.dispatcher.Dispatcher
  */
 public interface ObjectFactoryDestroyable {
+    /**
+     * <p>
+     * Perform any cleanup actions required by this object.
+     *</p>
+     *
+     * <p>
+     * Implementations should release any resources (e.g. threads, files)
+     * that were acquired during object creation.
+     *</p>
+     *
+     * @since Struts 2.0
+     */
     void destroy();
 }

@@ -26,16 +26,46 @@ import java.util.Objects;
 
 public interface Parameter {
 
+    /**
+     * Returns the name of the parameter.
+     *
+     * @return the name of the parameter.
+     */
     String getName();
 
+    /**
+     * Returns the value of the parameter as a string.
+     *
+     * @return the value of the parameter as a string.
+     */
     String getValue();
 
+    /**
+     * Checks if the parameter has a defined value.
+     *
+     * @return {@code true} if the parameter has a defined value, {@code false} otherwise.
+     */
     boolean isDefined();
 
+    /**
+     * Checks if the parameter has multiple values.
+     *
+     * @return {@code true} if the parameter has multiple values, {@code false} otherwise.
+     */
     boolean isMultiple();
 
+    /**
+     * Returns the values of the parameter as an array of strings.
+     *
+     * @return the values of the parameter as an array of strings.
+     */
     String[] getMultipleValues();
 
+    /**
+     * Returns the value of the parameter as an object.
+     *
+     * @return the value of the parameter as an object.
+     */
     Object getObject();
 
     class Request implements Parameter {

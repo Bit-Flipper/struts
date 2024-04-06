@@ -26,6 +26,19 @@ public interface TextParser {
 
     int DEFAULT_LOOP_COUNT = 1;
 
+    /**
+     * <p>
+     * Evaluates and parses the given expression using the specified opening character(s), {@link TextParseUtil.ParsedValueEvaluator},
+     * and maximum loop count.
+     * </p>
+     * 
+     * @param openChars the opening character(s) for the expression
+     * @param expression the expression to parse and evaluate in the form of ${foo.bar} or %{bar.foo}
+     * @param evaluator the {@link TextParseUtil.ParsedValueEvaluator} used to parse the expression
+     * @param maxLoopCount the maximum number of times the expression can be looped
+     * @return an {@link Object} containing the result of the parsed and evaluated expression
+     * @since 2.3.30
+     */
     Object evaluate(char[] openChars, String expression, TextParseUtil.ParsedValueEvaluator evaluator, int maxLoopCount);
 
 }

@@ -21,5 +21,12 @@
 package org.apache.struts2.showcase.hangman;
 
 public interface VocabSource {
-	Vocab getRandomVocab();
+	/**
+     * <p>Obtains a random vocabulary object for use in the hangman
+     * game. Implementations of this interface should provide the
+     * random vocabulary words for the hangman game.</p>
+     * 
+     * @return a random vocabulary object
+     */
+    Vocab getRandomVocab();
 }

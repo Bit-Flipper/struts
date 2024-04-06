@@ -29,6 +29,13 @@ import org.apache.struts2.interceptor.PrincipalProxy;
  */
 public interface PrincipalAware {
 
+    /**
+     * <p>
+     * This method is called with a {@link PrincipalProxy} instance created by the Struts framework.
+     * It can be used to get the Principal information from HttpServletRequest object.
+     *
+     * @param principalProxy PrincipalProxy instance.
+     */
     void withPrincipalProxy(PrincipalProxy principalProxy);
 
 }

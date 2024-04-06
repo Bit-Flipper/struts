@@ -22,8 +22,20 @@ import java.util.ResourceBundle;
 
 public interface TextProviderFactory {
 
+    /**
+     * Creates a new instance of {@link TextProvider} for the given class.
+     *
+     * @param clazz the class to create a text provider for
+     * @return a new {@link TextProvider} instance
+     */
     TextProvider createInstance(Class clazz);
 
+    /**
+     * Creates a new instance of {@link TextProvider} for the given resource bundle.
+     *
+     * @param bundle the resource bundle to create a text provider for
+     * @return a new {@link TextProvider} instance
+     */
     TextProvider createInstance(ResourceBundle bundle);
 
 }

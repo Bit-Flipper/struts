@@ -19,5 +19,10 @@
 package com.opensymphony.xwork2.util;
 
 public interface Animal {
+    /**
+     * Gets the name of the Animal.
+     * 
+     * @return The name of the Animal.
+     */
     String getName();
 }
