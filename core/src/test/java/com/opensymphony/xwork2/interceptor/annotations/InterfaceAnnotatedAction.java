@@ -19,12 +19,27 @@
 package com.opensymphony.xwork2.interceptor.annotations;
 
 public interface InterfaceAnnotatedAction {
-    @Before
+    /**
+       * Method annotated with {@link Before} annotation with default priority.
+       * This method will be executed before any action is executed.
+       *
+       * @return {@code null}
+       */
+      @Before
     String interfaceBefore();
 
-    @BeforeResult(priority=3)
+    /**
+       * Method annotated with {@link BeforeResult} annotation with a priority of 3.
+       * This method will be executed before the result of the action is executed.
+       */
+      @BeforeResult(priority=3)
     void interfaceBeforeResult();
 
-    @After(priority=3)
+    /**
+       * Method annotated with {@link After} annotation with a priority of 3.
+       * This method will be executed after the action is executed and before the
+       * result of the action is executed.
+       */
+      @After(priority=3)
     void interfaceAfter();
 }

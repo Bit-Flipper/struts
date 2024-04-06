@@ -23,6 +23,11 @@ package com.opensymphony.xwork2.ognl;
  * @param <Value> The type for the cache value entries
  */
 public interface OgnlCacheFactory<Key, Value> {
+    /**
+     * Constructs and configures a new {@code OgnlCache} instance using default parameters.
+     *
+     * @return a new cache instance
+     */
     OgnlCache<Key, Value> buildOgnlCache();
 
     /**
@@ -50,6 +55,11 @@ public interface OgnlCacheFactory<Key, Value> {
      */
     OgnlCache<Key, Value> buildOgnlCache(int evictionLimit, int initialCapacity, float loadFactor, CacheType cacheType);
 
+    /**
+     * Returns the maximum cache size allowed.
+     *
+     * @return the maximum cache size allowed
+     */
     int getCacheMaxSize();
 
     /**
@@ -60,6 +70,11 @@ public interface OgnlCacheFactory<Key, Value> {
         return CacheType.LRU.equals(getDefaultCacheType());
     }
 
+    /**
+     * Returns the default cache type.
+     *
+     * @return the default cache type as {@link com.opensymphony.xwork2.ognl.OgnlCacheFactory.CacheType}
+     */
     CacheType getDefaultCacheType();
 
     enum CacheType {

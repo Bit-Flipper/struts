@@ -25,6 +25,13 @@ import javax.portlet.PortletContext;
  */
 public interface PortletContextAware {
 
+    /**
+     * <p>
+     * Sets the {@link PortletContext} that this implementation is aware of.
+     * </p>
+     *
+     * @param portletContext the {@link PortletContext}
+     */
     void withPortletContext(PortletContext portletContext);
 
 }

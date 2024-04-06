@@ -21,7 +21,22 @@ package org.apache.struts2.views.java;
 import org.apache.struts2.components.template.TemplateRenderingContext;
 
 public interface Theme {
+    /**
+     * Get the name of the Theme
+     *
+     * @return The name of the Theme
+     */
     public String getName();
 
+    /**
+     * Render a tag for the Theme
+     *
+     * This method is responsible for rendering a tag for the Theme. The tag name is
+     * specified by the `name` parameter.
+     * 
+     * @param name  The name of the tag to render
+     * @param context  The context of the template rendering
+     * @throws StrutsException if there is an error rendering the tag
+     */
     public void renderTag(String name, TemplateRenderingContext context);
 }

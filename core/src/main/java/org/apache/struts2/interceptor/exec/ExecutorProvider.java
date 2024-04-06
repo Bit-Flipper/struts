@@ -29,10 +29,23 @@ import java.util.concurrent.ExecutorService;
  */
 public interface ExecutorProvider {
 
+    /**
+     * Executes the given {@link Runnable} task using the created thread pool.
+     *
+     * @param task - The task to be executed.
+     */
     void execute(Runnable task);
 
+    /**
+     * Returns whether the created thread pool is terminated or not.
+     *
+     * @return {@code true} if the thread pool is terminated, otherwise {@code false}.
+     */
     boolean isShutdown();
 
+    /**
+     * Initiates the graceful shutdown of the created thread pool.
+     */
     void shutdown();
 
 }

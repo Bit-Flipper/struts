@@ -22,5 +22,11 @@ package com.opensymphony.xwork2;
  * Need by the ProxyInvocationTest
  */
 public interface ProxyInvocationInterface {
+    /**
+     * Performs the action and returns the result.
+     *
+     * @return the result of the action.
+     * @see ProxyInvocationAction#show()
+     */
     public String show();
 }

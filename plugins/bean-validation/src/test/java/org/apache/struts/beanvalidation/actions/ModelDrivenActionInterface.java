@@ -21,6 +21,18 @@ package org.apache.struts.beanvalidation.actions;
 import org.apache.struts2.interceptor.validation.SkipValidation;
 
 public interface ModelDrivenActionInterface {
+    /**
+     * Skips validation for the current action.
+     *
+     * <p>
+     * This method should be used when validation needs to be skipped for a specific
+     * action.
+     * </p>
+     *
+     * @return The outcome to proceed to after skipping validation.
+     *
+     * @see SkipValidation
+     */
     @SkipValidation
     String skipMeByInterface();
 }

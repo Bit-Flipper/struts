@@ -24,5 +24,11 @@ package org.apache.struts2.json.bridge;
  * Time: 12:06:13 AM
  */
 public interface FieldBridge {
+    /**
+     * Converts the given object into its string representation.
+     *
+     * @param object the object to convert
+     * @return the string representation of the given object, or {@code null} if the object is {@code null}
+     */
     String objectToString(Object object);
 }

@@ -23,6 +23,12 @@ package com.opensymphony.xwork2.config.providers;
  */
 public interface ValueSubstitutor {
 
+    /**
+     * Substitutes variables in the given {@code value} string with proper System variables or environment variables.
+     *
+     * @param value The string containing variables to be replaced.
+     * @return The string with variables replaced by System variables or environment variables.
+     */
     String substitute(String value);
 
 }

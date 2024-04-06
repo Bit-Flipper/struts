@@ -25,6 +25,11 @@ import com.opensymphony.xwork2.util.ValueStack;
  */
 public interface ValueStackProvider {
 
+    /**
+     * {@inheritDoc}
+     *
+     * @since 6.0.0
+     */
     ValueStack getValueStack();
 
 }

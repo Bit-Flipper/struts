@@ -25,6 +25,19 @@ import javax.portlet.PortletRequest;
  */
 public interface PortletRequestAware {
 
+    /**
+     * <p>
+     * Updates the internal state with the given {@link PortletRequest}.
+     * </p>
+     *
+     * <p>
+     * Implementations must store the portlet request <strong>only</strong> for use during the current request.
+     * Implementors <strong>must not</strong> store the portlet request for use in a subsequent request
+     * or store it in a long-lived object or cache.
+     * </p>
+     *
+     * @param request the {@link PortletRequest} to update the internal state
+     */
     void withPortletRequest(PortletRequest request);
 
 }

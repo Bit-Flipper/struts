@@ -26,11 +26,43 @@ import org.apache.struts2.config.entities.BeanSelectionConfig;
 import org.apache.struts2.config.entities.ConstantConfig;
 
 public interface StrutsJavaConfiguration {
+    /**
+     * Returns a list of {@link BeanConfig} objects that define the beans used in the Struts application.
+     *
+     * @return a list of {@link BeanConfig} objects
+     * @see BeanConfig
+     */
     List<BeanConfig> beans();
 
+    /**
+     * Returns a list of {@link ConstantConfig} objects that define the constants used in the Struts application.
+     *
+     * @return a list of {@link ConstantConfig} objects
+     * @see ConstantConfig
+     */
     List<ConstantConfig> constants();
 
+    /**
+     * Returns an {@link Optional} containing a {@link BeanSelectionConfig} object that defines the strategy for selecting
+     * a bean based on a specified name.
+     *
+     * <p>
+     * If no bean selection strategy is defined, this method returns an empty {@link Optional}.
+     * </p>
+     *
+     * @return an {@link Optional} containing a {@link BeanSelectionConfig} object
+     * @see BeanSelectionConfig
+     */
     default Optional<BeanSelectionConfig> beanSelection() { return Optional.empty();}
 
+    /**
+     * Returns a list of strings that define the unknown handler stacks used in the Struts application.
+     *
+     * <p>
+     * An unknown handler stack is used to handle any actions that are not explicitly defined in the Struts configuration.
+     * </p>
+     *
+     * @return a list of strings defining the unknown handler stacks
+     */
     List<String> unknownHandlerStack();
 }

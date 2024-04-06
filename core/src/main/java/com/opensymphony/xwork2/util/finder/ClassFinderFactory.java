@@ -27,6 +27,17 @@ import java.util.Set;
  */
 public interface ClassFinderFactory {
 
+    /**
+     * Creates a new {@link ClassFinder} instance using a specified {@link ClassLoaderInterface}, a collection of URLs, a flag indicating
+     * whether or not to extract base interfaces, a set of protocols to include in the search, and a test for filtering class names.
+     *
+     * @param classLoaderInterface A {@link ClassLoaderInterface} that will be used to load classes that are found by the {@link ClassFinder}.
+     * @param urls A collection of URLs representing the classpath.
+     * @param extractBaseInterfaces A flag indicating whether or not to extract base interfaces from the classes that are found.
+     * @param protocols A set of protocols to include in the search. Only classes with the specified protocols will be considered.
+     * @param classNameFilter A test for filtering class names. Only classes with names that pass the test will be considered.
+     * @return A new {@link ClassFinder} instance.
+     */
     ClassFinder buildClassFinder(ClassLoaderInterface classLoaderInterface, Collection<URL> urls, boolean extractBaseInterfaces, Set<String> protocols, Test<String> classNameFilter);
 
 }

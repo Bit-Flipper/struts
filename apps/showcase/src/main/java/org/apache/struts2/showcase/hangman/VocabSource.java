@@ -21,5 +21,12 @@
 package org.apache.struts2.showcase.hangman;
 
 public interface VocabSource {
-	Vocab getRandomVocab();
+	/**
+     * getRandomVocab()
+     *
+     * This method returns a random Vocab object from the source.
+     *
+     * @return a randomly selected Vocab object.
+     */
+    Vocab getRandomVocab();
 }

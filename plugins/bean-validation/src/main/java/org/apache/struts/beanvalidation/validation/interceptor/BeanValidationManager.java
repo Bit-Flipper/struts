@@ -28,5 +28,24 @@ import javax.validation.Validator;
  */
 public interface BeanValidationManager {
 
+    /**
+     * <p>
+     * Method to return Validator instance.This will take in to account the provider class will try to create a validation factory from given Validator. Validator will be returned based on the user preference.Validator will be created based on the following cases.
+     * </p>
+     * <p>
+     * In case user has specify explicitly and in a type safe fashion the expected provider, it will be used to create validation factory from given Validator and an instance of javax.validation.Validator will be returned.
+     * </p>
+     * <p>
+     * In this case, the default validation provider resolver will be used to locate available providers. The chosen provider is defined as followed:
+     * </p>
+     * <ul>
+     * <li>if the XML configuration defines a provider, this provider is used</li>
+     * <li>if the XML configuration does not define a provider or if no XML configuration is present the first provider returned by the ValidationProviderResolver instance is used.</li>
+     * </ul>
+     *
+     * @return validator instance
+     * @see Validation
+     * @see ValidationProviderResolver
+     */
     Validator getValidator();
 }

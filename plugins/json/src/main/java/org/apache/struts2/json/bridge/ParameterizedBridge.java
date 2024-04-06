@@ -27,5 +27,12 @@ import java.util.Map;
  */
 public interface ParameterizedBridge {
 
+    /**
+     * <p>Sets the parameter values on the implementing object using the given map of parameter names to string values.</p>
+     *
+     * @param parameters a map of parameter names to string values
+     * @throws NullPointerException if the given map is {@code null}
+     * @see Map
+     */
     void setParameterValues(Map<String,String> parameters);
 }
