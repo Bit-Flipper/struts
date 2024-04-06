@@ -28,6 +28,14 @@ import java.util.Map;
  */
 public interface ResultFactory {
 
+    /**
+     * Builds a Result instance based on the given {@link com.opensymphony.xwork2.config.entities.ResultConfig ResultConfig}
+     *
+     * @param resultConfig the Result configuration
+     * @param extraContext any additional context
+     * @return a Result instance
+     * @throws Exception when building the Result instance fails
+     */
     Result buildResult(ResultConfig resultConfig, Map<String, Object> extraContext) throws Exception;
 
 }

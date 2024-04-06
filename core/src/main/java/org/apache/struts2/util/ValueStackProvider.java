@@ -25,6 +25,12 @@ import com.opensymphony.xwork2.util.ValueStack;
  */
 public interface ValueStackProvider {
 
+    /**
+     * <p>
+     * Returns the ValueStack instance associated with this provider.
+     * </p>
+     * @return the ValueStack instance
+     */
     ValueStack getValueStack();
 
 }

@@ -23,8 +23,26 @@ package com.opensymphony.xwork2.util.classloader;
  */
 public interface ResourceStore {
 
+    /**
+     * <p>
+     * Writes the given resource data to the store.
+     * </p>
+     * 
+     * @param pResourceName the name of the resource in the store
+     * @param pResourceData the data to write
+     * @since 2.3
+     */
     void write(final String pResourceName, final byte[] pResourceData);
 
+    /**
+     * <p>
+     * Reads the resource data from the store.
+     * </p>
+     * 
+     * @param pResourceName the name of the resource in the store
+     * @return the data for the given resource or {@code null} if not found
+     * @since 2.3
+     */
     byte[] read(final String pResourceName);
 }
 

@@ -28,5 +28,14 @@ import javax.validation.Validator;
  */
 public interface BeanValidationManager {
 
+    /**
+     * <p>
+     * Method for getting the instance of {@link Validator}.
+     * </p>
+     *
+     * @return {@link Validator} instance.
+     *
+     * @see Validator
+     */
     Validator getValidator();
 }

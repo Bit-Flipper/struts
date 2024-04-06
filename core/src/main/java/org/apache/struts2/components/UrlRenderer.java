@@ -48,6 +48,13 @@ public interface UrlRenderer {
      */
     void renderFormUrl(Form formComponent);
 
+    /**
+     * <p>
+     * Set the {@link ActionMapper} instance to use.
+     * </p>
+     *
+     * @param actionMapper The {@link ActionMapper} instance to set.
+     */
     void setActionMapper(ActionMapper actionMapper);
 
 }

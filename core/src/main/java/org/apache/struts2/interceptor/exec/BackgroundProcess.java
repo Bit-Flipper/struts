@@ -27,15 +27,63 @@ import org.apache.struts2.interceptor.ExecuteAndWaitInterceptor;
  */
 public interface BackgroundProcess extends Runnable {
 
+    /**
+     * <p>
+     * Prepares the background process for execution. This method is called by
+     * {@link ExecuteAndWaitInterceptor} before starting the background process.
+     * </p>
+     * 
+     * @return a new instance of the {@link BackgroundProcess}
+     */
     BackgroundProcess prepare();
 
+    /**
+     * <p>
+     * Returns the action being executed in the background.
+     * </p>
+     * 
+     * @return the action being executed in the background
+     */
     Object getAction();
 
+    /**
+     * <p>
+     * Returns the {@link ActionInvocation} for the action being executed in the
+     * background.
+     * </p>
+     * 
+     * @return the {@link ActionInvocation} for the action being executed in
+     * the background
+     */
     ActionInvocation getInvocation();
 
+    /**
+     * <p>
+     * Returns the result of the action executed in the background.
+     * </p>
+     * 
+     * @return the result of the action executed in the background
+     */
     String getResult();
 
+    /**
+     * <p>
+     * Returns the {@link Exception} thrown, if any, by the action executed in
+     * the background.
+     * </p>
+     * 
+     * @return the {@link Exception} thrown, if any, by the action executed in
+     * the background
+     */
     Exception getException();
 
+    /**
+     * <p>
+     * Returns whether or not the background process has completed execution.
+     * </p>
+     * 
+     * @return <code>true</code> if the background process has completed
+     * execution, <code>false</code> otherwise
+     */
     boolean isDone();
 }

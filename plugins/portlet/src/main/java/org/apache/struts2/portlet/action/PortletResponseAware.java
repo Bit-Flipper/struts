@@ -25,6 +25,11 @@ import javax.portlet.PortletResponse;
  */
 public interface PortletResponseAware {
 
+    /**
+     * Allows the class to interact with a PortletResponse object.
+     *
+     * @param response the PortletResponse object to interact with
+     */
     void withPortletResponse(PortletResponse response);
 
 }

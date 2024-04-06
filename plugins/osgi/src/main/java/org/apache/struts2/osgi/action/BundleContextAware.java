@@ -26,6 +26,17 @@ import org.osgi.framework.BundleContext;
  */
 public interface BundleContextAware {
 
+    /**
+     * <p>
+     * A method for receiving the {@link BundleContext} that the implementing object is associated with.
+     * </p>
+     * 
+     * <p>
+     * The receiving object must handle the {@link BundleContext} in a thread-safe manner.
+     * </p>
+     * 
+     * @param bundleContext the {@link BundleContext} to be used by the implementing object.
+     */
     void withBundleContext(BundleContext bundleContext);
 
 }

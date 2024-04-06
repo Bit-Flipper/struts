@@ -88,6 +88,19 @@ public interface FileManager {
      */
     boolean internal();
 
+    /**
+     * <p>
+     * Returns a collection of all URLs in the file system that have the same physical location as the given URL.
+     *</p>
+     *
+     * <p>
+     * This method returns a collection of URLs that represent the same physical location on the file system.
+     *</p>
+     *
+     * @param url the URL to resolve
+     * @return a collection of URLs representing the same physical location on the file system
+     * @throws IOException if an I/O error occurs while resolving the URL
+     */
     Collection<? extends URL> getAllPhysicalUrls(URL url) throws IOException;
 
 }

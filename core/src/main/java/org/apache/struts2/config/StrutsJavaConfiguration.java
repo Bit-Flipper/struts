@@ -26,11 +26,31 @@ import org.apache.struts2.config.entities.BeanSelectionConfig;
 import org.apache.struts2.config.entities.ConstantConfig;
 
 public interface StrutsJavaConfiguration {
+    /**
+     * <p>Gets the list of bean configurations.</p>
+     * 
+     * @return a list of {@link BeanConfig} instances.
+     */
     List<BeanConfig> beans();
 
+    /**
+     * <p>Gets the list of constant configurations.</p>
+     * 
+     * @return a list of {@link ConstantConfig} instances.
+     */
     List<ConstantConfig> constants();
 
+    /**
+     * <p>Gets the bean selection configuration.</p>
+     * 
+     * @return an {@link Optional} of {@link BeanSelectionConfig} instances.
+     */
     default Optional<BeanSelectionConfig> beanSelection() { return Optional.empty();}
 
+    /**
+     * <p>Gets the unknown handler stack configurations.</p>
+     * 
+     * @return a list of strings representing unknown handler stack configurations.
+     */
     List<String> unknownHandlerStack();
 }

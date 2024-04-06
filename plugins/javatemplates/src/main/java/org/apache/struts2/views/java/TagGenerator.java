@@ -22,5 +22,12 @@ import java.io.IOException;
 
 public interface TagGenerator extends TagHandler {
 
+    /**
+     * Generates the tag.
+     *
+     * @throws IOException if an I/O error occurs
+     * @author Your Name
+     * @since 1.0
+     */
     public void generate() throws IOException;
 }

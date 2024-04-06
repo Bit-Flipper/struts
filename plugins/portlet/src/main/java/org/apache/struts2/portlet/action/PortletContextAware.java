@@ -25,6 +25,14 @@ import javax.portlet.PortletContext;
  */
 public interface PortletContextAware {
 
+    /**
+     * <p>Provides the PortletContext to the implementing class.</p>
+     *
+     * <p>The PortletContext can be stored as an instance variable for later use, or the implementing class can
+     * utilize the PortletContext immediately within the implementation of this method.</p>
+     *
+     * @param portletContext the PortletContext for the current portlet request
+     */
     void withPortletContext(PortletContext portletContext);
 
 }

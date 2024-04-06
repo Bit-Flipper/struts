@@ -28,6 +28,13 @@ import org.apache.struts2.interceptor.csp.CspSettings;
  */
 public interface CspSettingsAware {
 
+    /**
+     * <p>
+     * Get the custom {@link CspSettings} to configure the Content-Security-Policy (CSP) header.
+     * </p>
+     *
+     * @return the {@link CspSettings} instance, may not be null
+     */
     CspSettings getCspSettings();
 
 }

@@ -25,6 +25,13 @@ import javax.portlet.PortletRequest;
  */
 public interface PortletRequestAware {
 
+    /**
+     * <p>
+     * Called with the current PortletRequest object when the Action is executed.
+     * </p>
+     *
+     * @param request the current PortletRequest object
+     */
     void withPortletRequest(PortletRequest request);
 
 }

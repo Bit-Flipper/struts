@@ -27,5 +27,12 @@ import java.util.Map;
  */
 public interface ParameterizedBridge {
 
+    /**
+     * <p>
+     * Sets the parameter values for this component.
+     * </p>
+     * 
+     * @param parameters a Map of parameter names to values.
+     */
     void setParameterValues(Map<String,String> parameters);
 }

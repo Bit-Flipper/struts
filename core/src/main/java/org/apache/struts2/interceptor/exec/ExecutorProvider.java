@@ -29,10 +29,30 @@ import java.util.concurrent.ExecutorService;
  */
 public interface ExecutorProvider {
 
+    /**
+     * <p>
+     * Executes the given {@link Runnable} task.</p>
+     * 
+     * @param task {@link Runnable} task to be executed
+     * @since 6.1.0
+     */
     void execute(Runnable task);
 
+    /**
+     * <p>
+     * Checks if the {@link ExecutorProvider} has been shutdown.</p>
+     * 
+     * @return true if the provider has been shutdown, false otherwise
+     * @since 6.1.0
+     */
     boolean isShutdown();
 
+    /**
+     * <p>
+     * Initiates an orderly shutdown in progress of executing tasks.</p>
+     * 
+     * @since 6.1.0
+     */
     void shutdown();
 
 }

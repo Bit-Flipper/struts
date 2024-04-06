@@ -25,17 +25,55 @@ package com.opensymphony.xwork2.ognl;
  */
 public interface OgnlCache<Key, Value> {
 
+    /**
+     * Returns the value associated with the key, or {@code null} if there is no such key.
+     *
+     * @param key the key
+     * @return the value associated with the key, or {@code null} if there is no such key
+     */
     Value get(Key key);
 
+    /**
+     * Associates the key with the value in the cache.
+     *
+     * @param key   the key
+     * @param value the value
+     */
     void put(Key key, Value value);
 
+    /**
+     * If the specified key is not already associated with a value, associates it with the given value.
+     * Returns {@code true} if the new key-value pair was added to the cache.
+     *
+     * @param key   the key
+     * @param value the value
+     * @return {@code true} if the new key-value pair was added to the cache
+     */
     void putIfAbsent(Key key, Value value);
 
+    /**
+     * Returns the number of key-value mappings in the cache.
+     *
+     * @return the number of key-value mappings in the cache
+     */
     int size();
 
+    /**
+     * Removes all mappings from this cache.
+     */
     void clear();
 
+    /**
+     * Returns the eviction limit for this cache.
+     *
+     * @return the eviction limit for this cache
+     */
     int getEvictionLimit();
 
+    /**
+     * Sets the eviction limit for this cache. An eviction limit of 0, or less than 0, implies no limit.
+     *
+     * @param cacheEvictionLimit the new eviction limit
+     */
     void setEvictionLimit(int cacheEvictionLimit);
 }
